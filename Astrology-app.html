@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astrology Form</title>
+  <style>
+    /* ======= BASIC STYLES ======= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0b0033, #000);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    /* ======= FORM CONTAINER ======= */
+    .astro-form-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .astro-form-container h1 {
+      font-size: 2rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #ffd700;
+    }
+
+    .astro-form-container p {
+      color: #ccc;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    /* ======= FORM ELEMENTS ======= */
+    .astro-form-container input,
+    .astro-form-container select,
+    .astro-form-container button {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1rem;
+      transition: border-color 0.3s ease, background 0.3s ease;
+    }
+
+    .astro-form-container input:focus,
+    .astro-form-container select:focus {
+      outline: none;
+      border-color: #ffd700;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    ::placeholder {
+      color: #bbb;
+    }
+
+    .astro-form-container button {
+      background: linear-gradient(45deg, #ffd700, #ff9900);
+      color: #000;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .astro-form-container button:hover {
+      background: linear-gradient(45deg, #ffcc00, #ff8800);
+      transform: translateY(-2px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    }
+
+    /* ======= FOOTER ======= */
+    .footer-text {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+
+    .footer-text a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="astro-form-container">
+    <h1>🔮 Astrology Form</h1>
+    <p>Enter your birth details to discover your zodiac and horoscope.</p>
+
+    <form id="astroForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="time">Time of Birth</label>
+      <input type="time" id="time" name="time" required />
+
+      <label for="place">Place of Birth </label>
+      <input type="text" id="place" name="place" placeholder="Enter your birthplace" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male ♂</option>
+        <option value="female">Female ♀</option>
+      </select>
+
+      <button type="submit">Get My Astrology Report</button>
+    </form>
+<div class="result" id="result"></div>
+    <div class="footer-text">
+      © 2025 Astrology Portal | Designed by <a href="#">Sandeep</a>
+    </div>
+  </div>
+
+  <script src="Astrology-app.js"></script>
+</body>
+</html>
